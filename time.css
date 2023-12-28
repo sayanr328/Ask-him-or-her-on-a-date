@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <link rel="stylesheet" href="time.css" />
-  <script>
-    function setDateTime() {
-      var date = document.getElementById("dateInput").value;
-      var time = document.getElementById("timeInput").value;
-      var month = document.getElementById("monthInput").value;
-      document.getElementById("displayDateTime").innerText = "Date: " + date + ", Time: " + time + ", Month: " + month;
-    }
-  </script>
-</head>
-<body>
-  <label for="dateInput">Date:</label>
-  <input type="text" id="dateInput" placeholder="Enter date"><br><br>
-  <label for="timeInput">Time:</label>
-  <input type="text" id="timeInput" placeholder="Enter time"><br><br>
-  <label for="monthInput">Month:</label>
-  <input type="text" id="monthInput" placeholder="Enter month"><br><br>
-  <button onclick="setDateTime()">Set Date and Time</button><br><br>
-  <div id="displayDateTime"></div>
-</body>
-</html>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
+}
