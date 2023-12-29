@@ -1,5 +1,6 @@
 
 
+
 body {
   display: flex;
   justify-content: center;
@@ -9,3 +10,59 @@ body {
   background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
 }
 
+#dateInput
+{
+  position: relative;
+  width: 90%;
+  padding: 6px 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+#timeInput
+{
+  position: relative;
+  width: 90%;
+  padding: 6px 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+#monthInput
+{
+  position: relative;
+  width: 90%;
+  padding: 6px 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+
+
+.round-button {
+  position: relative;
+  width: 100%;
+  padding: 6px 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
