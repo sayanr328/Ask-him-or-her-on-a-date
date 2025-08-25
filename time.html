@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="stylesheet" href="time.css" />
-  <script>
-    function setDateTime() {
-      var date = document.getElementById("dateInput").value;
-      var time = document.getElementById("timeInput").value;
-      var month = document.getElementById("monthInput").value;
-      document.getElementById("displayDateTime").innerText = "Date: " + date + ", Time: " + time + ", Month: " + month;
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Date Setter</title>
+    <!-- This line links the HTML to the CSS file. Make sure both files are in the same folder. -->
+    <link rel="stylesheet" href="time.css">
 </head>
-
 <body>
- 
-  <div class="circle">
-   
-    <div class="inputBox">
-      <input type="text" id="dateInput" placeholder="Enter date">
-    </div>
-    <div class="inputBox">
-      <input type="text" id="timeInput" placeholder="Enter time">
-    </div>
-    <div class="inputBox">
-      <input type="text" id="monthInput" placeholder="Enter month">
-    </div>
-     <div>
-       <button type="button" class="round-button" onclick="setDateTime()">Set Date and Time</button>
-     </div>
-     <div id="displayDateTime"></div></div>
-  </div>
-  </div>
-</body>
 
+    <!-- This is the main card that holds all the content. -->
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Set a Reminder</h1>
+            <p>Select a date and time for your event.</p>
+        </header>
+
+        <!-- Form Section with inputs -->
+        <form>
+            <!-- Form Group for Date Input -->
+            <div class="form-group">
+                <label for="date">Enter date</label>
+                <input type="date" id="date" name="date" aria-label="Enter date">
+            </div>
+
+            <!-- Form Group for Time Input -->
+            <div class="form-group">
+                <label for="time">Enter time</label>
+                <input type="time" id="time" name="time" aria-label="Enter time">
+            </div>
+
+            <!-- Form Group for Month Input -->
+            <div class="form-group">
+                <label for="month">Enter month</label>
+                <input type="month" id="month" name="month" aria-label="Enter month">
+            </div>
+
+            <!-- The main action button -->
+            <button type="submit" class="submit-btn">Set Date and Time</button>
+        </form>
+    </div>
+
+</body>
 </html>
