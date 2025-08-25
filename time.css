@@ -1,68 +1,116 @@
+/* Import the 'Inter' font from Google Fonts for a clean, modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
+/* Basic reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
+/* Body styling: sets up the full-page gradient background and centers the content */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    padding: 20px; /* Adds some space on smaller screens */
 }
 
-#dateInput
-{
-  position: relative;
-  width: 90%;
-  padding: 6px 10px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  font-size: 1em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
+/* The main container card with the glassmorphism effect */
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* For Safari support */
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
 }
 
-#timeInput
-{
-  position: relative;
-  width: 90%;
-  padding: 6px 10px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  font-size: 1em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
+/* Header text styles */
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-#monthInput
-{
-  position: relative;
-  width: 90%;
-  padding: 6px 10px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  font-size: 1em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
+.header p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
 }
 
+/* Styling for the wrapper around each label and input */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px; /* Creates the fully rounded pill shape */
+    transition: all 0.3s ease;
+}
 
+/* Adds a glow effect when an input is focused */
+.form-group:focus-within {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
 
-.round-button {
-  position: relative;
-  width: 100%;
-  padding: 6px 10px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  font-size: 1em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
+.form-group label {
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none; /* Allows clicks to go through to the input */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 20px 15px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styles the calendar icon in date/time inputs to be white and interactive */
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(1.2);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+input::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Styling for the main submit button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #0072ff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for the button to make it feel interactive */
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
